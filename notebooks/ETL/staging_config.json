@@ -1,185 +1,214 @@
 [
-    {
-        "table": "Joueurs",
-        "csv": "../Data/joueurs.csv",
-        "id_col": "ID_Joueur",
-        "compare_cols": [
-            "Nom",
-            "Prénom",
-            "Date_Naissance",
-            "Num_Licence",
-            "Date_Adhésion",
-            "Pied_Dominant",
-            "Position",
-            "Taille",
-            "Poids",
-            "IMC",
-            "Catégorie",
-            "Aspect_Général"
-        ]
-    },
-    {
-        "table": "Matchs",
-        "csv": "../Data/matchs.csv",
-        "id_col": "ID_Match_Unique",
-        "compare_cols": [
-            "ID_Match",
-            "ID_Joueur",
-            "Saison",
-            "Date_Match",
-            "Catégorie",
-            "Compétition",
-            "Titulaire",
-            "Temps_Jeu",
-            "Carton_Jaune",
-            "Carton_Rouge",
-            "Fautes_Commisses",
-            "Buts",
-            "Score",
-            "Résultat"
-        ]
-    },
-    {
-        "table": "Donnees_Athletiques",
-        "csv": "../Data/donnees_athletiques.csv",
-        "id_col": "ID_Athletique",
-        "compare_cols": [
-            "ID_Match",
-            "ID_Joueur",
-            "VO2_Max",
-            "Distance_Parcourue",
-            "Vitesse_Max",
-            "Vitesse_Moyenne",
-            "Hauteur_Saut",
-            "Puissance_Membres",
-            "Force_Maximale",
-            "Temps_Récupération"
-        ]
-    },
-    {
-        "table": "Donnees_Techniques",
-        "csv": "../Data/donnees_techniques.csv",
-        "id_col": "ID_Technique",
-        "compare_cols": [
-            "ID_Match",
-            "ID_Joueur",
-            "Nombre_Passes",
-            "Précision_Passes",
-            "Réception_Réussie",
-            "Contrôle_Balle",
-            "Nombre_Tirs",
-            "Précision_Tirs",
-            "Duels_Aériens_Gagnés",
-            "Centres_Réussis",
-            "Dribbles_Réussis",
-            "Interceptions",
-            "Tacles_Réussis",
-            "Conversion_Occasions"
-        ]
-    },
-    {
-        "table": "Donnees_Tactiques",
-        "csv": "../Data/donnees_tactiques.csv",
-        "id_col": "ID_Tactique",
-        "compare_cols": [
-            "ID_Match",
-            "ID_Joueur",
-            "Zones_Influence",
-            "Transitions_Rapides",
-            "Pressions_Réussies"
-        ]
-    },
-    {
-        "table": "Donnees_Psychologiques",
-        "csv": "../Data/donnees_psychologiques.csv",
-        "id_col": "ID_Psychologique",
-        "compare_cols": [
-            "ID_Match",
-            "ID_Joueur",
-            "Confiance",
-            "Résilience"
-        ]
-    },
-    {
-        "table": "Donnees_Contextuelles",
-        "csv": "../Data/donnees_contextuelles.csv",
-        "id_col": "ID_Contexte",
-        "compare_cols": [
-            "ID_Match",
-            "Saison",
-            "Météo",
-            "Etat_Terrain",
-            "Adversaire",
-            "Compétition"
-        ]
-    },
-    {
-        "table": "Examen_General",
-        "csv": "../Data/examen_general.csv",
-        "id_col": "ID_General",
-        "compare_cols": [
-            "ID_Joueur",
-            "Date_Examen",
-            "Température",
-            "Tension",
-            "Glycémie",
-            "Diabète_Type_1",
-            "Diabète_Type_2",
-            "Asthme",
-            "Hypertension",
-            "Allergies_Sévères"
-        ]
-    },
-    {
-        "table": "Examen_Cardiopulmonaire",
-        "csv": "../Data/examen_cardiopulmonaire.csv",
-        "id_col": "ID_Cardio",
-        "compare_cols": [
-            "ID_Joueur",
-            "Date_Examen",
-            "Fréquence_Cardiaque",
-            "Capacité_Pulmonaire",
-            "ECG_Anormal",
-            "ETT_Anormal",
-            "Test_Effort"
-        ]
-    },
-    {
-        "table": "Examen_Locomoteur",
-        "csv": "../Data/examen_locomoteur.csv",
-        "id_col": "ID_Locomoteur",
-        "compare_cols": [
-            "ID_Joueur",
-            "Date_Examen",
-            "Lésion_Musculaire",
-            "Douleurs_Articulaires",
-            "Tendinites_Chroniques",
-            "Déformation_Squelettique",
-            "Opération"
-        ]
-    },
-    {
-        "table": "Examen_ORL",
-        "csv": "../Data/examen_orl.csv",
-        "id_col": "ID_ORL",
-        "compare_cols": [
-            "ID_Joueur",
-            "Date_Examen",
-            "Audition",
-            "Respiration_Nasale",
-            "État_Gorge"
-        ]
-    },
-    {
-        "table": "Examen_Stomatologique",
-        "csv": "../Data/examen_stomatologique.csv",
-        "id_col": "ID_Stomatologique",
-        "compare_cols": [
-            "ID_Joueur",
-            "Date_Examen",
-            "Nombre_Caries",
-            "État_Gencives",
-            "Problèmes_Mâchoire"
-        ]
-    }
+  {
+    "table": "Joueurs",
+    "csv": "../Data/joueurs.csv",
+    "id_col": "ID_Joueur",
+    "compare_cols": [
+      "Nom",
+      "Prénom",
+      "Date_Naissance",
+      "Num_Licence",
+      "Date_Adhésion",
+      "Pied_Dominant",
+      "Position",
+      "Taille",
+      "Poids",
+      "IMC",
+      "Catégorie",
+      "Aspect_Général"
+    ]
+  },
+  {
+    "table": "Matchs",
+    "csv": "../Data/matchs.csv",
+    "id_col": "ID_Match_Unique",
+    "compare_cols": [
+      "ID_Match",
+      "ID_Joueur",
+      "Saison",
+      "Date_Match",
+      "Catégorie",
+      "Compétition",
+      "Titulaire",
+      "Temps_Jeu",
+      "Carton_Jaune",
+      "Carton_Rouge",
+      "Fautes_Commisses",
+      "Buts",
+      "Score",
+      "Résultat"
+    ]
+  },
+  {
+    "table": "Donnees_Athletiques",
+    "csv": "../Data/donnees_athletiques.csv",
+    "id_col": "ID_Athletique",
+    "compare_cols": [
+      "ID_Match",
+      "ID_Joueur",
+      "VO2_Max",
+      "Distance_Parcourue",
+      "Vitesse_Max",
+      "Vitesse_Moyenne",
+      "Hauteur_Saut",
+      "Puissance_Membres",
+      "Force_Maximale",
+      "Temps_Récupération"
+    ]
+  },
+  {
+    "table": "Donnees_Techniques",
+    "csv": "../Data/donnees_techniques.csv",
+    "id_col": "ID_Technique",
+    "compare_cols": [
+      "ID_Match",
+      "ID_Joueur",
+      "Nombre_Passes",
+      "Précision_Passes",
+      "Réception_Réussie",
+      "Contrôle_Balle",
+      "Nombre_Tirs",
+      "Précision_Tirs",
+      "Duels_Aériens_Gagnés",
+      "Centres_Réussis",
+      "Dribbles_Réussis",
+      "Interceptions",
+      "Tacles_Réussis",
+      "Conversion_Occasions"
+    ]
+  },
+  {
+    "table": "Donnees_Tactiques",
+    "csv": "../Data/donnees_tactiques.csv",
+    "id_col": "ID_Tactique",
+    "compare_cols": [
+      "ID_Match",
+      "ID_Joueur",
+      "Zones_Influence",
+      "Transitions_Rapides",
+      "Pressions_Réussies"
+    ]
+  },
+  {
+    "table": "Donnees_Psychologiques",
+    "csv": "../Data/donnees_psychologiques.csv",
+    "id_col": "ID_Psychologique",
+    "compare_cols": [
+      "ID_Match",
+      "ID_Joueur",
+      "Confiance",
+      "Résilience"
+    ]
+  },
+  {
+    "table": "Donnees_Contextuelles",
+    "csv": "../Data/donnees_contextuelles.csv",
+    "id_col": "ID_Contexte",
+    "compare_cols": [
+      "ID_Match",
+      "Saison",
+      "Météo",
+      "Etat_Terrain",
+      "Adversaire",
+      "Compétition"
+    ]
+  },
+  {
+    "table": "Examen_General",
+    "csv": "../Data/examen_general.csv",
+    "id_col": "ID_General",
+    "compare_cols": [
+      "ID_Joueur",
+      "Date_Examen",
+      "Température",
+      "Tension",
+      "Glycémie",
+      "Diabète_Type_1",
+      "Diabète_Type_2",
+      "Asthme",
+      "Hypertension",
+      "Allergies_Sévères"
+    ]
+  },
+  {
+    "table": "Examen_Cardiopulmonaire",
+    "csv": "../Data/examen_cardiopulmonaire.csv",
+    "id_col": "ID_Cardio",
+    "compare_cols": [
+      "ID_Joueur",
+      "Date_Examen",
+      "Fréquence_Cardiaque",
+      "Capacité_Pulmonaire",
+      "ECG_Anormal",
+      "ETT_Anormal",
+      "Test_Effort"
+    ]
+  },
+  {
+    "table": "Examen_Locomoteur",
+    "csv": "../Data/examen_locomoteur.csv",
+    "id_col": "ID_Locomoteur",
+    "compare_cols": [
+      "ID_Joueur",
+      "Date_Examen",
+      "Lésion_Musculaire",
+      "Douleurs_Articulaires",
+      "Tendinites_Chroniques",
+      "Déformation_Squelettique",
+      "Opération"
+    ]
+  },
+  {
+    "table": "Examen_ORL",
+    "csv": "../Data/examen_orl.csv",
+    "id_col": "ID_ORL",
+    "compare_cols": [
+      "ID_Joueur",
+      "Date_Examen",
+      "Audition",
+      "Respiration_Nasale",
+      "État_Gorge"
+    ]
+  },
+  {
+    "table": "Examen_Stomatologique",
+    "csv": "../Data/examen_stomatologique.csv",
+    "id_col": "ID_Stomatologique",
+    "compare_cols": [
+      "ID_Joueur",
+      "Date_Examen",
+      "Nombre_Caries",
+      "État_Gencives",
+      "Problèmes_Mâchoire"
+    ]
+  },
+  {
+    "csv": "../Data/objectifs_joueur.csv",
+    "table": "Objectifs_Joueur",
+    "id_col": "ID_Objectif",
+    "compare_cols": [
+      "ID_Joueur",
+      "Saison",
+      "Objectif_Type",
+      "Valeur_Cible",
+      "Unite"
+    ]
+  },
+  {
+    "csv": "../Data/entrainements.csv",
+    "table": "Entrainements",
+    "id_col": "ID_Entrainement",
+    "compare_cols": [
+      "ID_Joueur",
+      "Date_Entrainement",
+      "Durée",
+      "Intensité",
+      "Distance_Parcourue",
+      "Sprint_Max",
+      "Type_Exercice",
+      "Catégorie",
+      "Saison"
+    ]
+  }
+
 ]

@@ -1,214 +1,382 @@
 [
   {
-    "table": "Joueurs",
-    "csv": "../Data/joueurs.csv",
-    "id_col": "ID_Joueur",
-    "compare_cols": [
-      "Nom",
-      "Prénom",
-      "Date_Naissance",
-      "Num_Licence",
-      "Date_Adhésion",
-      "Pied_Dominant",
-      "Position",
-      "Taille",
-      "Poids",
-      "IMC",
-      "Catégorie",
-      "Aspect_Général"
-    ]
+      "table": "Joueurs",
+      "csv": "../Data/joueurs.csv",
+      "csv_name": "joueurs.csv",
+      "id_col": "ID_Joueur",
+      "compare_cols": [
+          "Nom",
+          "Prénom",
+          "Date_Naissance",
+          "Num_Licence",
+          "Date_Adhésion",
+          "Pied_Dominant",
+          "Position",
+          "Taille",
+          "Poids",
+          "IMC",
+          "Catégorie",
+          "Aspect_Général"
+      ],
+      "dtypes": {
+          "ID_Joueur": "INT",
+          "Nom": "VARCHAR(19)",
+          "Prénom": "VARCHAR(18)",
+          "Date_Naissance": "VARCHAR(20)",
+          "Num_Licence": "VARCHAR(16)",
+          "Date_Adhésion": "VARCHAR(20)",
+          "Pied_Dominant": "VARCHAR(20)",
+          "Position": "VARCHAR(19)",
+          "Taille": "FLOAT",
+          "Poids": "FLOAT",
+          "IMC": "FLOAT",
+          "Catégorie": "VARCHAR(18)",
+          "Aspect_Général": "FLOAT"
+      }
   },
   {
-    "table": "Matchs",
-    "csv": "../Data/matchs.csv",
-    "id_col": "ID_Match_Unique",
-    "compare_cols": [
-      "ID_Match",
-      "ID_Joueur",
-      "Saison",
-      "Date_Match",
-      "Catégorie",
-      "Compétition",
-      "Titulaire",
-      "Temps_Jeu",
-      "Carton_Jaune",
-      "Carton_Rouge",
-      "Fautes_Commisses",
-      "Buts",
-      "Score",
-      "Résultat"
-    ]
+      "table": "Donnees_Athletiques",
+      "csv": "../Data/donnees_athletiques.csv",
+      "csv_name": "donnees_athletiques.csv",
+      "id_col": "ID_Athletique",
+      "compare_cols": [
+          "ID_Match",
+          "ID_Joueur",
+          "VO2_Max",
+          "Distance_Parcourue",
+          "Vitesse_Max",
+          "Vitesse_Moyenne",
+          "Hauteur_Saut",
+          "Puissance_Membres",
+          "Force_Maximale",
+          "Temps_Récupération"
+      ],
+      "dtypes": {
+          "ID_Athletique": "INT",
+          "ID_Match": "INT",
+          "ID_Joueur": "INT",
+          "VO2_Max": "FLOAT",
+          "Distance_Parcourue": "FLOAT",
+          "Vitesse_Max": "FLOAT",
+          "Vitesse_Moyenne": "FLOAT",
+          "Hauteur_Saut": "FLOAT",
+          "Puissance_Membres": "FLOAT",
+          "Force_Maximale": "FLOAT",
+          "Temps_Récupération": "FLOAT"
+      }
   },
   {
-    "table": "Donnees_Athletiques",
-    "csv": "../Data/donnees_athletiques.csv",
-    "id_col": "ID_Athletique",
-    "compare_cols": [
-      "ID_Match",
-      "ID_Joueur",
-      "VO2_Max",
-      "Distance_Parcourue",
-      "Vitesse_Max",
-      "Vitesse_Moyenne",
-      "Hauteur_Saut",
-      "Puissance_Membres",
-      "Force_Maximale",
-      "Temps_Récupération"
-    ]
+      "table": "Donnees_Techniques",
+      "csv": "../Data/donnees_techniques.csv",
+      "csv_name": "donnees_techniques.csv",
+      "id_col": "ID_Technique",
+      "compare_cols": [
+          "ID_Match",
+          "ID_Joueur",
+          "Nombre_Passes",
+          "Précision_Passes",
+          "Réception_Réussie",
+          "Contrôle_Balle",
+          "Nombre_Tirs",
+          "Précision_Tirs",
+          "Duels_Aériens_Gagnés",
+          "Centres_Réussis",
+          "Dribbles_Réussis",
+          "Interceptions",
+          "Tacles_Réussis",
+          "Conversion_Occasions"
+      ],
+      "dtypes": {
+          "ID_Technique": "INT",
+          "ID_Match": "INT",
+          "ID_Joueur": "INT",
+          "Nombre_Passes": "INT",
+          "Précision_Passes": "FLOAT",
+          "Réception_Réussie": "INT",
+          "Contrôle_Balle": "FLOAT",
+          "Nombre_Tirs": "INT",
+          "Précision_Tirs": "FLOAT",
+          "Duels_Aériens_Gagnés": "INT",
+          "Centres_Réussis": "INT",
+          "Dribbles_Réussis": "INT",
+          "Interceptions": "INT",
+          "Tacles_Réussis": "INT",
+          "Conversion_Occasions": "FLOAT"
+      }
   },
   {
-    "table": "Donnees_Techniques",
-    "csv": "../Data/donnees_techniques.csv",
-    "id_col": "ID_Technique",
-    "compare_cols": [
-      "ID_Match",
-      "ID_Joueur",
-      "Nombre_Passes",
-      "Précision_Passes",
-      "Réception_Réussie",
-      "Contrôle_Balle",
-      "Nombre_Tirs",
-      "Précision_Tirs",
-      "Duels_Aériens_Gagnés",
-      "Centres_Réussis",
-      "Dribbles_Réussis",
-      "Interceptions",
-      "Tacles_Réussis",
-      "Conversion_Occasions"
-    ]
+      "table": "Donnees_Tactiques",
+      "csv": "../Data/donnees_tactiques.csv",
+      "csv_name": "donnees_tactiques.csv",
+      "id_col": "ID_Tactique",
+      "compare_cols": [
+          "ID_Match",
+          "ID_Joueur",
+          "Zones_Influence",
+          "Transitions_Rapides",
+          "Pressions_Réussies"
+      ],
+      "dtypes": {
+          "ID_Tactique": "INT",
+          "ID_Match": "INT",
+          "ID_Joueur": "INT",
+          "Zones_Influence": "VARCHAR(19)",
+          "Transitions_Rapides": "INT",
+          "Pressions_Réussies": "INT"
+      }
   },
   {
-    "table": "Donnees_Tactiques",
-    "csv": "../Data/donnees_tactiques.csv",
-    "id_col": "ID_Tactique",
-    "compare_cols": [
-      "ID_Match",
-      "ID_Joueur",
-      "Zones_Influence",
-      "Transitions_Rapides",
-      "Pressions_Réussies"
-    ]
+      "table": "Matchs",
+      "csv": "../Data/matchs.csv",
+      "csv_name": "matchs.csv",
+      "id_col": "ID_Match_Unique",
+      "compare_cols": [
+          "ID_Match",
+          "ID_Joueur",
+          "Saison",
+          "Date_Match",
+          "Catégorie",
+          "Compétition",
+          "Titulaire",
+          "Temps_Jeu",
+          "Carton_Jaune",
+          "Carton_Rouge",
+          "Fautes_Commisses",
+          "Buts",
+          "Score",
+          "Résultat"
+      ],
+      "dtypes": {
+          "ID_Match_Unique": "INT",
+          "ID_Match": "INT",
+          "ID_Joueur": "INT",
+          "Saison": "VARCHAR(19)",
+          "Date_Match": "VARCHAR(20)",
+          "Catégorie": "VARCHAR(17)",
+          "Compétition": "VARCHAR(15)",
+          "Titulaire": "BIT",
+          "Temps_Jeu": "INT",
+          "Carton_Jaune": "INT",
+          "Carton_Rouge": "INT",
+          "Fautes_Commisses": "INT",
+          "Buts": "INT",
+          "Score": "VARCHAR(13)",
+          "Résultat": "VARCHAR(17)"
+      }
   },
   {
-    "table": "Donnees_Psychologiques",
-    "csv": "../Data/donnees_psychologiques.csv",
-    "id_col": "ID_Psychologique",
-    "compare_cols": [
-      "ID_Match",
-      "ID_Joueur",
-      "Confiance",
-      "Résilience"
-    ]
+      "table": "Donnees_Psychologiques",
+      "csv": "../Data/donnees_psychologiques.csv",
+      "csv_name": "donnees_psychologiques.csv",
+      "id_col": "ID_Psychologique",
+      "compare_cols": [
+          "ID_Match",
+          "ID_Joueur",
+          "Confiance",
+          "Résilience"
+      ],
+      "dtypes": {
+          "ID_Psychologique": "INT",
+          "ID_Match": "INT",
+          "ID_Joueur": "INT",
+          "Confiance": "INT",
+          "Résilience": "INT"
+      }
   },
   {
-    "table": "Donnees_Contextuelles",
-    "csv": "../Data/donnees_contextuelles.csv",
-    "id_col": "ID_Contexte",
-    "compare_cols": [
-      "ID_Match",
-      "Saison",
-      "Météo",
-      "Etat_Terrain",
-      "Adversaire",
-      "Compétition"
-    ]
+      "table": "Donnees_Contextuelles",
+      "csv": "../Data/donnees_contextuelles.csv",
+      "csv_name": "donnees_contextuelles.csv",
+      "id_col": "ID_Contexte",
+      "compare_cols": [
+          "ID_Match",
+          "Saison",
+          "Météo",
+          "Etat_Terrain",
+          "Adversaire",
+          "Compétition"
+      ],
+      "dtypes": {
+          "ID_Contexte": "INT",
+          "ID_Match": "INT",
+          "Saison": "VARCHAR(17)",
+          "Météo": "VARCHAR(20)",
+          "Etat_Terrain": "VARCHAR(16)",
+          "Adversaire": "VARCHAR(21)",
+          "Compétition": "VARCHAR(15)"
+      }
   },
   {
-    "table": "Examen_General",
-    "csv": "../Data/examen_general.csv",
-    "id_col": "ID_General",
-    "compare_cols": [
-      "ID_Joueur",
-      "Date_Examen",
-      "Température",
-      "Tension",
-      "Glycémie",
-      "Diabète_Type_1",
-      "Diabète_Type_2",
-      "Asthme",
-      "Hypertension",
-      "Allergies_Sévères"
-    ]
+      "table": "Examen_General",
+      "csv": "../Data/examen_general.csv",
+      "csv_name": "examen_general.csv",
+      "id_col": "ID_General",
+      "compare_cols": [
+          "ID_Joueur",
+          "Date_Examen",
+          "Température",
+          "Tension",
+          "Glycémie",
+          "Diabète_Type_1",
+          "Diabète_Type_2",
+          "Asthme",
+          "Hypertension",
+          "Allergies_Sévères"
+      ],
+      "dtypes": {
+          "ID_General": "INT",
+          "ID_Joueur": "INT",
+          "Date_Examen": "VARCHAR(20)",
+          "Température": "FLOAT",
+          "Tension": "VARCHAR(16)",
+          "Glycémie": "FLOAT",
+          "Diabète_Type_1": "INT",
+          "Diabète_Type_2": "INT",
+          "Asthme": "INT",
+          "Hypertension": "INT",
+          "Allergies_Sévères": "INT"
+      }
   },
   {
-    "table": "Examen_Cardiopulmonaire",
-    "csv": "../Data/examen_cardiopulmonaire.csv",
-    "id_col": "ID_Cardio",
-    "compare_cols": [
-      "ID_Joueur",
-      "Date_Examen",
-      "Fréquence_Cardiaque",
-      "Capacité_Pulmonaire",
-      "ECG_Anormal",
-      "ETT_Anormal",
-      "Test_Effort"
-    ]
+      "table": "Examen_Cardiopulmonaire",
+      "csv": "../Data/examen_cardiopulmonaire.csv",
+      "csv_name": "examen_cardiopulmonaire.csv",
+      "id_col": "ID_Cardio",
+      "compare_cols": [
+          "ID_Joueur",
+          "Date_Examen",
+          "Fréquence_Cardiaque",
+          "Capacité_Pulmonaire",
+          "ECG_Anormal",
+          "ETT_Anormal",
+          "Test_Effort"
+      ],
+      "dtypes": {
+          "ID_Cardio": "INT",
+          "ID_Joueur": "INT",
+          "Date_Examen": "VARCHAR(20)",
+          "Fréquence_Cardiaque": "INT",
+          "Capacité_Pulmonaire": "FLOAT",
+          "ECG_Anormal": "INT",
+          "ETT_Anormal": "INT",
+          "Test_Effort": "FLOAT"
+      }
   },
   {
-    "table": "Examen_Locomoteur",
-    "csv": "../Data/examen_locomoteur.csv",
-    "id_col": "ID_Locomoteur",
-    "compare_cols": [
-      "ID_Joueur",
-      "Date_Examen",
-      "Lésion_Musculaire",
-      "Douleurs_Articulaires",
-      "Tendinites_Chroniques",
-      "Déformation_Squelettique",
-      "Opération"
-    ]
+      "table": "Examen_Locomoteur",
+      "csv": "../Data/examen_locomoteur.csv",
+      "csv_name": "examen_locomoteur.csv",
+      "id_col": "ID_Locomoteur",
+      "compare_cols": [
+          "ID_Joueur",
+          "Date_Examen",
+          "Lésion_Musculaire",
+          "Douleurs_Articulaires",
+          "Tendinites_Chroniques",
+          "Déformation_Squelettique",
+          "Opération"
+      ],
+      "dtypes": {
+          "ID_Locomoteur": "INT",
+          "ID_Joueur": "INT",
+          "Date_Examen": "VARCHAR(20)",
+          "Lésion_Musculaire": "INT",
+          "Douleurs_Articulaires": "INT",
+          "Tendinites_Chroniques": "INT",
+          "Déformation_Squelettique": "INT",
+          "Opération": "INT"
+      }
   },
   {
-    "table": "Examen_ORL",
-    "csv": "../Data/examen_orl.csv",
-    "id_col": "ID_ORL",
-    "compare_cols": [
-      "ID_Joueur",
-      "Date_Examen",
-      "Audition",
-      "Respiration_Nasale",
-      "État_Gorge"
-    ]
+      "table": "Examen_ORL",
+      "csv": "../Data/examen_orl.csv",
+      "csv_name": "examen_orl.csv",
+      "id_col": "ID_ORL",
+      "compare_cols": [
+          "ID_Joueur",
+          "Date_Examen",
+          "Audition",
+          "Respiration_Nasale",
+          "État_Gorge"
+      ],
+      "dtypes": {
+          "ID_ORL": "INT",
+          "ID_Joueur": "INT",
+          "Date_Examen": "VARCHAR(20)",
+          "Audition": "FLOAT",
+          "Respiration_Nasale": "INT",
+          "État_Gorge": "INT"
+      }
   },
   {
-    "table": "Examen_Stomatologique",
-    "csv": "../Data/examen_stomatologique.csv",
-    "id_col": "ID_Stomatologique",
-    "compare_cols": [
-      "ID_Joueur",
-      "Date_Examen",
-      "Nombre_Caries",
-      "État_Gencives",
-      "Problèmes_Mâchoire"
-    ]
+      "table": "Examen_Stomatologique",
+      "csv": "../Data/examen_stomatologique.csv",
+      "csv_name": "examen_stomatologique.csv",
+      "id_col": "ID_Stomatologique",
+      "compare_cols": [
+          "ID_Joueur",
+          "Date_Examen",
+          "Nombre_Caries",
+          "État_Gencives",
+          "Problèmes_Mâchoire"
+      ],
+      "dtypes": {
+          "ID_Stomatologique": "INT",
+          "ID_Joueur": "INT",
+          "Date_Examen": "VARCHAR(20)",
+          "Nombre_Caries": "INT",
+          "État_Gencives": "INT",
+          "Problèmes_Mâchoire": "INT"
+      }
   },
   {
-    "csv": "../Data/objectifs_joueur.csv",
-    "table": "Objectifs_Joueur",
-    "id_col": "ID_Objectif",
-    "compare_cols": [
-      "ID_Joueur",
-      "Saison",
-      "Objectif_Type",
-      "Valeur_Cible",
-      "Unite"
-    ]
+      "csv": "../Data/objectifs_joueur.csv",
+      "csv_name": "objectifs_joueur.csv",
+      "table": "Objectifs_Joueur",
+      "id_col": "ID_Objectif",
+      "compare_cols": [
+          "ID_Joueur",
+          "Saison",
+          "Objectif_Type",
+          "Valeur_Cible",
+          "Unite"
+      ],
+      "dtypes": {
+          "ID_Objectif": "INT",
+          "ID_Joueur": "INT",
+          "Saison": "VARCHAR(19)",
+          "Objectif_Type": "VARCHAR(26)",
+          "Valeur_Cible": "FLOAT",
+          "Unite": "VARCHAR(17)"
+      }
   },
   {
-    "csv": "../Data/entrainements.csv",
-    "table": "Entrainements",
-    "id_col": "ID_Entrainement",
-    "compare_cols": [
-      "ID_Joueur",
-      "Date_Entrainement",
-      "Durée",
-      "Intensité",
-      "Distance_Parcourue",
-      "Sprint_Max",
-      "Type_Exercice",
-      "Catégorie",
-      "Saison"
-    ]
+      "csv": "../Data/entrainements.csv",
+      "csv_name": "entrainements.csv",
+      "table": "Entrainements",
+      "id_col": "ID_Entrainement",
+      "compare_cols": [
+          "ID_Joueur",
+          "Date_Entrainement",
+          "Durée",
+          "Intensité",
+          "Distance_Parcourue",
+          "Sprint_Max",
+          "Type_Exercice",
+          "Catégorie",
+          "Saison"
+      ],
+      "dtypes": {
+          "ID_Entrainement": "INT",
+          "ID_Joueur": "INT",
+          "Date_Entrainement": "VARCHAR(20)",
+          "Durée": "INT",
+          "Intensité": "VARCHAR(17)",
+          "Distance_Parcourue": "FLOAT",
+          "Sprint_Max": "FLOAT",
+          "Type_Exercice": "VARCHAR(30)",
+          "Catégorie": "VARCHAR(17)",
+          "Saison": "VARCHAR(19)"
+      }
   }
-
 ]

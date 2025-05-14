@@ -1,0 +1,19 @@
+[2025-05-14 12:00:20] 📥 Table: Joueurs → ✔️ Insertion: 0, Mise à jour: 1
+[2025-05-14 12:00:20] 📥 Table: Donnees_Athletiques → ✔️ Insertion: 0, Mise à jour: 0
+[2025-05-14 12:10:15] 📥 Table: Joueurs → ✔️ Insertion: 0, Mise à jour: 1
+[2025-05-14 12:10:55] 📥 Table: Joueurs → ✔️ Insertion: 0, Mise à jour: 1
+[2025-05-14 12:11:14] 📥 Table: Joueurs → ✔️ Insertion: 0, Mise à jour: 1
+[2025-05-14 12:26:02] 📥 Table: Examen_Cardiopulmonaire → ✔️ Insertion: 0, Mise à jour: 766
+[2025-05-14 12:28:43] 📥 Table: Examen_Cardiopulmonaire → 🆕 Table créée avec succès.
+[2025-05-14 12:28:43] 📥 Table: Examen_Cardiopulmonaire → ✔️ Insertion: 766, Mise à jour: 0
+[2025-05-14 12:28:51] 📥 Table: Examen_General → 🆕 Table créée avec succès.
+[2025-05-14 12:28:51] 📥 Table: Examen_General → ✔️ Insertion: 1031, Mise à jour: 0
+[2025-05-14 12:28:58] 📥 Table: Examen_Locomoteur → 🆕 Table créée avec succès.
+[2025-05-14 12:28:58] 📥 Table: Examen_Locomoteur → ✔️ Insertion: 742, Mise à jour: 0
+[2025-05-14 12:29:05] 📥 Table: Examen_ORL → 🆕 Table créée avec succès.
+[2025-05-14 12:29:05] 📥 Table: Examen_ORL → ✔️ Insertion: 744, Mise à jour: 0
+[2025-05-14 12:29:12] 📥 Table: Examen_Stomatologique → 🆕 Table créée avec succès.
+[2025-05-14 12:29:12] 📥 Table: Examen_Stomatologique → ✔️ Insertion: 760, Mise à jour: 0
+[2025-05-14 12:30:51] 📥 Table: Donnees_Athletiques → ✔️ Insertion: 0, Mise à jour: 0
+[2025-05-14 12:37:45] 📥 Table: Entrainements → ✔️ Insertion: 0, Mise à jour: 0
+[2025-05-14 12:39:02] 📥 Table: Matchs → ✔️ Insertion: 0, Mise à jour: 0

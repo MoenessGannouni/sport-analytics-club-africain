@@ -1,0 +1,341 @@
+[
+  {
+    "table": "dim_joueur",
+    "type": "dimension",
+    "source": "Joueurs",
+    "columns": [
+      "ID_Joueur",
+      "Nom",
+      "Prénom",
+      "Date_Naissance",
+      "Num_Licence",
+      "Date_Adhésion",
+      "ID_Pied",
+      "ID_Poste",
+      "Taille",
+      "Poids",
+      "IMC",
+      "ID_Categorie",
+      "Aspect_Général"
+    ],
+    "static": false
+  },
+  {
+  "table": "dim_match",
+  "type": "dimension",
+  "source": "Matchs_Contexte",
+  "columns": [
+    "ID_Match_Unique", "ID_Match", "ID_Competition", "Score",
+    "ID_Resultat", "ID_Categorie", "ID_Meteo", "ID_Etat", "Adversaire"
+  ],
+  "static": false
+}
+,
+  {
+    "table": "dim_time",
+    "type": "dimension",
+    "source": null,
+    "columns": [
+      "ID_Temps",
+      "Jour",
+      "Mois",
+      "Année",
+      "Semaine",
+      "Trimestre",
+      "Nom_Mois",
+      "Jour_Semaine"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_objectif",
+    "type": "dimension",
+    "source": "Objectifs_Joueur",
+    "columns": [
+      "ID_Objectif",
+      "Objectif_Type",
+      "Unité"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_entrainement",
+    "type": "dimension",
+    "source": "Entrainements",
+    "columns": [
+      "ID_Entrainement",
+      "Type_Exercice",
+      "Intensité",
+      "Catégorie"
+    ],
+    "static": false
+  },
+  {
+    "table": "dim_resultat",
+    "type": "dimension",
+    "source": "Resultats",
+    "columns": [
+      "ID_Resultat",
+      "Nom_Resultat"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_position",
+    "type": "dimension",
+    "source": "Postes",
+    "columns": [
+      "ID_Poste",
+      "Nom_Poste"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_pied",
+    "type": "dimension",
+    "source": "Pieds",
+    "columns": [
+      "ID_Pied",
+      "Cote_Pied"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_competition",
+    "type": "dimension",
+    "source": "Competitions",
+    "columns": [
+      "ID_Competition",
+      "Nom_Competition"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_categorie",
+    "type": "dimension",
+    "source": "Categories",
+    "columns": [
+      "ID_Categorie",
+      "Nom_Categorie"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_meteo",
+    "type": "dimension",
+    "source": "Meteo",
+    "columns": [
+      "ID_Meteo",
+      "Type_Meteo"
+    ],
+    "static": true
+  },
+  {
+    "table": "dim_etat_terrain",
+    "type": "dimension",
+    "source": "Etats_Terrain",
+    "columns": [
+      "ID_Etat",
+      "Etat"
+    ],
+    "static": true
+  },
+  {
+    "table": "faits_matchs",
+    "type": "fact",
+    "source": "Matchs",
+    "columns": [
+      "FK_Joueur",
+      "FK_Temps",
+      "FK_Match",
+      "Titulaire",
+      "Temps_Jeu",
+      "Carton_Jaune",
+      "Carton_Rouge",
+      "Fautes_Commisses",
+      "Buts"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Temps": "dim_time.ID_Temps",
+      "FK_Match": "dim_match.ID_Match_Unique"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_matchs"
+  },
+  {
+  "table": "faits_performances",
+  "type": "fact",
+  "source": "vw_faits_performances",
+  "columns": [
+    "FK_Joueur", "FK_Match",
+    "VO2_Max", "Distance_Parcourue", "Vitesse_Max", "Vitesse_Moyenne",
+    "Hauteur_Saut", "Puissance_Membres", "Force_Maximale", "Temps_Récupération",
+    "Nombre_Passes", "Précision_Passes", "Réception_Réussie", "Contrôle_Balle",
+    "Nombre_Tirs", "Précision_Tirs", "Duels_Aériens_Gagnés", "Centres_Réussis",
+    "Dribbles_Réussis", "Interceptions", "Tacles_Réussis", "Conversion_Occasions",
+    "Zones_Influence", "Transitions_Rapides", "Pressions_Réussies"
+  ],
+  "join_keys": {
+    "FK_Joueur": "dim_joueur.ID_Joueur",
+    "FK_Match": "dim_match.ID_Match"
+  },
+  "auto_pk": true,
+  "pk": "ID_faits_performances"
+}
+,
+  {
+    "table": "faits_entrainements",
+    "type": "fact",
+    "source": "Entrainements",
+    "columns": [
+      "FK_Joueur",
+      "FK_Temps",
+      "FK_Entrainement",
+      "Durée",
+      "Distance_Parcourue",
+      "Sprint_Max"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Temps": "dim_time.ID_Temps",
+      "FK_Entrainement": "dim_entrainement.ID_Entrainement"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_entrainements"
+  },
+  {
+    "table": "faits_objectifs",
+    "type": "fact",
+    "source": "vw_faits_objectifs",
+    "columns": [
+      "FK_Joueur",
+      "FK_Objectif",
+      "Saison",
+      "Valeur_Cible",
+      "Valeur_Réelle"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Objectif": "dim_objectif.ID_Objectif"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_objectifs"
+  },
+  {
+    "table": "faits_psychologiques",
+    "type": "fact",
+    "source": "Donnees_Psychologiques",
+    "columns": [
+      "FK_Joueur",
+      "FK_Match",
+      "Confiance",
+      "Résilience"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Match": "dim_match.ID_Match_Unique"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_psychologiques"
+  },
+  {
+    "table": "faits_examens_generaux",
+    "type": "fact",
+    "source": "Examen_General",
+    "columns": [
+      "FK_Joueur",
+      "FK_Temps",
+      "Température",
+      "Tension",
+      "Glycémie",
+      "Diabète_Type_1",
+      "Diabète_Type_2",
+      "Asthme",
+      "Hypertension",
+      "Allergies_Sévères"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Temps": "dim_time.ID_Temps"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_examens_generaux"
+  },
+  {
+    "table": "faits_examens_cardiopulmonaires",
+    "type": "fact",
+    "source": "Examen_Cardiopulmonaire",
+    "columns": [
+      "FK_Joueur",
+      "FK_Temps",
+      "Fréquence_Cardiaque",
+      "Capacité_Pulmonaire",
+      "ECG_Anormal",
+      "ETT_Anormal",
+      "Test_Effort"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Temps": "dim_time.ID_Temps"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_examens_cardiopulmonaires"
+  },
+  {
+    "table": "faits_examens_locomoteurs",
+    "type": "fact",
+    "source": "Examen_Locomoteur",
+    "columns": [
+      "FK_Joueur",
+      "FK_Temps",
+      "Lésion_Musculaire",
+      "Douleurs_Articulaires",
+      "Tendinites_Chroniques",
+      "Déformation_Squelettique",
+      "Opération"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Temps": "dim_time.ID_Temps"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_examens_locomoteurs"
+  },
+  {
+    "table": "faits_examens_orl",
+    "type": "fact",
+    "source": "Examen_ORL",
+    "columns": [
+      "FK_Joueur",
+      "FK_Temps",
+      "Audition",
+      "Respiration_Nasale",
+      "État_Gorge"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Temps": "dim_time.ID_Temps"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_examens_orl"
+  },
+  {
+    "table": "faits_examens_stomatologiques",
+    "type": "fact",
+    "source": "Examen_Stomatologique",
+    "columns": [
+      "FK_Joueur",
+      "FK_Temps",
+      "Nombre_Caries",
+      "État_Gencives",
+      "Problèmes_Mâchoire"
+    ],
+    "join_keys": {
+      "FK_Joueur": "dim_joueur.ID_Joueur",
+      "FK_Temps": "dim_time.ID_Temps"
+    },
+    "auto_pk": true,
+    "pk": "ID_faits_examens_stomatologiques"
+  }
+]

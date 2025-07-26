@@ -1,0 +1,31 @@
+{
+  "name": "Club Africain Theme",
+  "dataColors": [
+    "#E30613",
+    "#ffffff",
+    "#333333",
+    "#F7C59F",
+    "#CC0000"
+  ],
+  "background": "#ffffff",
+  "foreground": "#000000",
+  "tableAccent": "#E30613",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "color": [
+          {
+            "solid": {
+              "color": "#E30613"
+            }
+          }
+        ],
+        "fontSize": [
+          {
+            "value": 12
+          }
+        ]
+      }
+    }
+  }
+}

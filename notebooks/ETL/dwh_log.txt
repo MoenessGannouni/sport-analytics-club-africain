@@ -1,0 +1,75 @@
+
+=== Exécution à 2025-05-25 22:03:09 ===
+Statut : ✅ Succès
+Tables chargées avec succès :
+  - faits_matchs
+  - faits_performances
+  - faits_entrainements
+  - faits_objectifs
+  - faits_psychologiques
+  - faits_examens_generaux
+  - faits_examens_cardiopulmonaires
+  - faits_examens_locomoteurs
+  - faits_examens_orl
+  - faits_examens_stomatologiques
+==================================================
+
+=== Exécution à 2025-07-07 22:18:08 ===
+Statut : ✅ Succès
+Tables chargées avec succès :
+  - faits_matchs
+  - faits_performances
+  - faits_entrainements
+  - faits_objectifs
+  - faits_psychologiques
+  - faits_examens_generaux
+  - faits_examens_cardiopulmonaires
+  - faits_examens_locomoteurs
+  - faits_examens_orl
+  - faits_examens_stomatologiques
+==================================================
+
+=== Exécution à 2025-07-12 18:48:58 ===
+Statut : ✅ Succès
+Tables chargées avec succès :
+  - faits_matchs
+  - faits_performances
+  - faits_entrainements
+  - faits_objectifs
+  - faits_psychologiques
+  - faits_examens_generaux
+  - faits_examens_cardiopulmonaires
+  - faits_examens_locomoteurs
+  - faits_examens_orl
+  - faits_examens_stomatologiques
+==================================================
+
+=== Exécution à 2025-07-16 17:42:49 ===
+Statut : ✅ Succès
+Tables chargées avec succès :
+  - faits_matchs
+  - faits_performances
+  - faits_entrainements
+  - faits_objectifs
+  - faits_psychologiques
+  - faits_examens_generaux
+  - faits_examens_cardiopulmonaires
+  - faits_examens_locomoteurs
+  - faits_examens_orl
+  - faits_examens_stomatologiques
+==================================================
+
+=== Exécution à 2025-07-17 18:53:34 ===
+Statut : ✅ Succès
+Tables chargées avec succès :
+  - faits_matchs
+  - faits_performances
+  - faits_entrainements
+  - faits_objectifs
+  - faits_psychologiques
+  - faits_examens_generaux
+  - faits_examens_cardiopulmonaires
+  - faits_examens_locomoteurs
+  - faits_examens_orl
+  - faits_examens_stomatologiques
+==================================================
